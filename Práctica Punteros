@@ -1,0 +1,21 @@
+
+#include "Punteros.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int i=0;
+	char nombre[20];
+	char *puntero = nombre;
+		printf ("Introduzca su nombre", puntero);
+		gets_s(nombre) ;
+		while (i<20){
+		printf("%s\n", puntero);
+		puntero++;
+		i++;
+		}
+		fflush;
+		system("pause");
+		return (0);
+	
+}
