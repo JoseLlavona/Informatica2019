@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include "pch.h"
+#include<string.h>
+#include <stdlib.h>
+#include <iostream>
+
+int numero();
+int parimpar(int num);
+int main() {
+	int a;
+	int num = numero();
+	a = parimpar(num);
+	if (a == 0) {
+		printf("El numero es impar\n");
+	}
+	if (a == 1) {
+		printf("El numero es par\n");
+	}
+	system("pause");
+	return 0;
+}
+int numero() {
+	int num;
+	printf("Introduzca un numero entero\n");
+	scanf_s("%d", &num);
+	fflush;
+	while (scanf_s("%d", &num) != 1) {
+		printf("Numero incorrecto, introduzca un numero entero\n");
+		scanf_s("%d", &num);
+		fflush;
+	}
+	return (num);
+}
+int parimpar(int num) {
+	int numero=num;
+	int par;
+		if (numero % 2 == 0) {
+			par = 1;
+		}
+		else {
+			par = 0;
+		}
+		return par;
+}
